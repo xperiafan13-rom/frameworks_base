@@ -62,7 +62,7 @@ final class ProcessList {
 
     // The B list of SERVICE_ADJ -- these are the old and decrepit
     // services that aren't as shiny and interesting as the ones in the A list.
-    static final int SERVICE_B_ADJ = 8;
+    static final int SERVICE_B_ADJ = 12;
 
     // This is the process of the previous application that the user was in.
     // This process is kept above other things, because it is very common to
@@ -70,16 +70,16 @@ final class ProcessList {
     // task switch (toggling between the two top recent apps) as well as normal
     // UI flow such as clicking on a URI in the e-mail app to view in the browser,
     // and then pressing back to return to e-mail.
-    static final int PREVIOUS_APP_ADJ = 7;
+    static final int PREVIOUS_APP_ADJ = 5;
 
     // This is a process holding the home application -- we want to try
     // avoiding killing it, even if it would normally be in the background,
     // because the user interacts with it so much.
-    static final int HOME_APP_ADJ = 6;
+    static final int HOME_APP_ADJ = 3;
 
     // This is a process holding an application service -- killing it will not
     // have much of an impact as far as the user is concerned.
-    static final int SERVICE_ADJ = 5;
+    static final int SERVICE_ADJ = 6;
 
     // This is a process with a heavy-weight application.  It is in the
     // background, but we want to try to avoid killing it.  Value set in
@@ -88,7 +88,7 @@ final class ProcessList {
 
     // This is a process currently hosting a backup operation.  Killing it
     // is not entirely fatal but is generally a bad idea.
-    static final int BACKUP_APP_ADJ = 3;
+    static final int BACKUP_APP_ADJ = 7;
 
     // This is a process only hosting components that are perceptible to the
     // user, and we really want to avoid killing them, but they are not
